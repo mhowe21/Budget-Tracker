@@ -24,7 +24,7 @@ const config = {
                 return "[path][name].[ext]";
               },
               publicPath: function (url) {
-                return url.replace("./", "/public/index.html");
+                return url.replace("/", "./public/index.html");
               },
             },
           },
