@@ -5,10 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "lite-server": "lite-server",
-    "heroku-postbuild": "webpack -p",
-    "watch": "webpack --watch",
-    "webpackDevStart": "webpack serve --open",
     "devStart": "nodemon server.js"
   },
   "author": "",
