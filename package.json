@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "lite-server": "lite-server",
-    "build": "webpack",
+    "heroku-postbuild": "webpack -p",
     "watch": "webpack --watch",
     "webpackDevStart": "webpack serve --open",
     "devStart": "nodemon server.js"
