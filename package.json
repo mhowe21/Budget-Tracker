@@ -8,7 +8,7 @@
     "lite-server": "lite-server",
     "build": "webpack",
     "watch": "webpack --watch",
-    "webpackStartDev": "webpack serve --open",
+    "webpackDevStart": "webpack serve --open",
     "devStart": "nodemon server.js"
   },
   "author": "",

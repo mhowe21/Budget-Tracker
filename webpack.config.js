@@ -24,7 +24,7 @@ const config = {
                 return "[path][name].[ext]";
               },
               publicPath: function (url) {
-                return url.replace("/", "./public/index.html");
+                return url.replace("/", "../public/index.html");
               },
             },
           },
@@ -44,7 +44,7 @@ const config = {
       name: "Budget Tracker",
       short_name: "Budget Tracker",
       description: "An app that allows you to track a budget.",
-      start_url: "./public/index.html",
+      start_url: "../public/index.html",
       background_color: "#01579b",
       theme_color: "#ffffff",
       fingerprints: false,
@@ -59,6 +59,12 @@ const config = {
     }),
   ],
   mode: "development",
+
+  devServer: {
+    contentBase: path.join(__dirname, "public"),
+    compress: true,
+    port: 9000,
+  },
 };
 
 module.exports = config;
