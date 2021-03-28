@@ -166,6 +166,8 @@ function sendTransaction(isAdding) {
       // fetch failed, so save in indexed db
       saveRecord(transaction);
 
+      db.transaction([transaction], "readwrite");
+
       // clear form
       nameEl.value = "";
       amountEl.value = "";
