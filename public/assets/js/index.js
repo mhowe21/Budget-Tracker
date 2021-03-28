@@ -20,6 +20,13 @@ request.onupgradeneeded = function (e) {
     keyPath: "id",
     autoIncrement: true,
   });
+  store.createIndex("name", "name", { unique: false });
+  store.transaction.oncomple = function (e) {
+    let budgetObjectStore = db
+      .transaction("BudgetItems", "readwrite")
+      .objectStore("BudgetItems");
+    budgetObjectStore.add("BudgetItems");
+  };
 };
 
 fetch("/api/transaction")
